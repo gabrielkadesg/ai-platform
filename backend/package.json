@@ -1,0 +1,49 @@
+{
+  "name": "ai-platform-backend",
+  "version": "1.0.0",
+  "description": "Backend da Plataforma de IA",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "migrate": "ts-node src/scripts/migrate.ts",
+    "migrate:rollback": "ts-node src/scripts/rollback.ts",
+    "seed": "ts-node src/scripts/seed.ts",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src --ext .ts",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "typescript": "^5.2.2",
+    "pg": "^8.11.2",
+    "dotenv": "^16.3.1",
+    "jsonwebtoken": "^9.1.0",
+    "bcryptjs": "^2.4.3",
+    "joi": "^17.11.0",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.0.0",
+    "axios": "^1.6.2",
+    "multer": "^1.4.5-lts.1",
+    "uuid": "^9.0.1",
+    "winston": "^3.11.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.9.0",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jest": "^29.5.8",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "eslint": "^8.53.0",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1"
+  }
+}
